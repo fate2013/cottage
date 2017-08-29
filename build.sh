@@ -5,7 +5,7 @@ if [[ $1 = "-loc" ]]; then
     exit
 fi
 
-VER=0.0.1a
+VER=0.1a
 #ID=unknown
 ID=$(git rev-parse HEAD | cut -c1-7)
 
