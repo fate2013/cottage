@@ -21,7 +21,6 @@ func init() {
 }
 
 func main() {
-	cottageServer := server.NewCottageServer()
+	cottageServer := server.NewCottageServer(config.Cottage)
 	cottageServer.Launch(config.Cottage.ListenAddr)
-	<-make(chan int)
 }
