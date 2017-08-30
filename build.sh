@@ -10,10 +10,12 @@ VER=0.1a
 ID=$(git rev-parse HEAD | cut -c1-7)
 
 if [[ $1 = "-mac" ]]; then
+    cd daemon
     CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-X github.com/nicholaskh/golib/server.VERSION=$VER -X github.com/nicholaskh/golib/server.BuildID=$ID -w"
-    mv cottage bin/cottage.mac
+    mv daemon ../bin/cottage.mac
 else
+    cd daemon
     go build -race -ldflags "-X github.com/nicholaskh/golib/server.VERSION=$VER -X github.com/nicholaskh/golib/server.BuildID=$ID -w"
-    mv cottage bin/cottage.linux
-    bin/cottage.linux -v
+    mv daemon ../bin/cottage.linux
+    ../bin/cottage.linux -v
 fi
