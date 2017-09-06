@@ -1,0 +1,17 @@
+{
+	listen_addr: "10080"
+	
+	storage: {
+		type: "tfs"
+		url: "http://api.ffan.com/tfs/v1/files"
+	}
+	
+	record: {
+		type: "mysql"
+		host: "127.0.0.1"
+		port: 3306
+		username: "root"
+		password: ""
+		db: "cottage"
+	}
+}
