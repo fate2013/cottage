@@ -3,7 +3,7 @@
 	
 	storage: {
 		type: "tfs"
-		url: "http://api.ffan.com/tfs/v1/files"
+		url: "http://qiniu.com"
 	}
 	
 	record: {
